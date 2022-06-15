@@ -1,4 +1,4 @@
-<div class="d-flex ui-header container">
+<div class="d-flex ui-header container-fluid">
     <div class="d-flex">
         <div class="logo-box">
             <div>
@@ -60,7 +60,7 @@
             <span class="text-administration"> <span class="icon"> < </span> ADMINISTRATION / <span class="text-users">USERS</span></span>
             <h5>User Management</h5>
         </div>
-        <button type="button" class="add-user btn">Add User</button>
+        <a href="#" class="add-user btn">Add Task</a>
     </div>
     
 </section>
@@ -101,8 +101,20 @@
                     <td>Administrator</td>
                     <td>Acme LLC</td>
                     <td>2018-90-12</td>
-                    <td></td>
-                    <td>...</td>
+                    <td>
+                        <a href="#" class="active btn">Active</a>
+                    </td>
+                    <td>
+                        <button type="button" class="more btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            ...
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Approve</a></li>
+                            <li><a class="dropdown-item" href="#">Deny</a></li>
+                        </ul>
+                    </td>
                   </tr>
                   <tr>
                     <th>ID45823</th>
@@ -112,7 +124,17 @@
                     <td>RMC 123</td>
                     <td>2018-90-12</td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        <button type="button" class="more btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            ...
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Approve</a></li>
+                            <li><a class="dropdown-item" href="#">Deny</a></li>
+                        </ul>
+                    </td>
                   </tr>
                   <tr>
                     <th>ID45879</th>
@@ -122,10 +144,34 @@
                     <td>Mangus LLC</td>
                     <td>2018-90-12</td>
                     <td></td>
-                    <td></td>
+                    <td>
+                        <button type="button" class="more btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            ...
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">View</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Approve</a></li>
+                            <li><a class="dropdown-item" href="#">Deny</a></li>
+                        </ul>
+                    </td>
                   </tr>
                 </tbody>
-              </table>
+            </table>
+            <div class="container d-flex">
+                <div class="d-flex">
+                    <p class="number-user">Displaying 1 - 25 of 32 Users  |<p class="number-blue">25</p> <p class="number-user">50 100 Result per page.</p></p>
+                </div>
+                <div class="browse-page">
+
+                </div>
+            </div>
         </div>
+    </div>
+</section>
+
+<section class="container-fluid footer">
+    <div class="container">
+        <p class="footer">© 2018 Runzheimer, All rights reserved</p>
     </div>
 </section>

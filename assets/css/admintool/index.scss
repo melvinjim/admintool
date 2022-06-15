@@ -27,7 +27,7 @@
 
     div.ui-header{
         justify-content: space-between;
-        padding-top: 9px;
+        padding: 8px 75px 5px 66px;
     }
 
     div.icon-x{
@@ -124,9 +124,52 @@ section.section-filter{
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
     }
+
     td .status-pending{
         border: solid #ce5c36;
         background-color: #ce5c36;
         border-radius: 50%;
+    }
+
+    table.table{
+        background-color: #fff;
+        border: solid #80808047 1px;
+    }
+
+    td button.more{
+        height: 17px;
+        display: flex;
+        align-items: center;
+    }
+
+    td a.active{
+        background-color: #48aeea;
+        font-size: 12px;
+        color: #fff;
+        border-radius: 30px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        width: 60px;
+    }
+
+    div div div p.number-user{
+        color: #808080;
+    }
+
+    div div div p.number-blue{
+        color: #48aeea;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+section.footer{
+    display: flex;
+    justify-content: center;
+    background-color: #383d43;
+    height: 50px;
+    div p.footer{
+        color: #fff;
     }
 }
