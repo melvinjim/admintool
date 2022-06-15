@@ -1,8 +1,29 @@
-.title-administration{
+.aling-items{
     display: flex;
     align-items: center;
+    padding-right: 20px;
+}
+
+.logo-box{
+    margin-top: 5px;
+    height: 30px;
+    border-right: solid #fff 1px;
+    padding-right: 10px;
+}
+
+.title-administration{
+    margin-left: 10px;
 }
 
 .container-fluid{
     background-color: #3281ae !important;
+}
+
+.title-text-down{
+    font-size: 7px;
+    color: #fff ;
+}
+
+.primera{
+    justify-content: space-between;
 }
