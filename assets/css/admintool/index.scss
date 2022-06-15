@@ -119,4 +119,14 @@ section.section-filter{
     div .hr-division{
         width: 81pc;
     }
+
+    div div table.table thead .column-table{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+    }
+    td .status-pending{
+        border: solid #ce5c36;
+        background-color: #ce5c36;
+        border-radius: 50%;
+    }
 }
