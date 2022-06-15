@@ -1,29 +1,41 @@
-.aling-items{
-    display: flex;
-    align-items: center;
-    padding-right: 20px;
-}
-
-.logo-box{
-    margin-top: 5px;
-    height: 30px;
-    border-right: solid #fff 1px;
-    padding-right: 10px;
-}
-
-.title-administration{
-    margin-left: 10px;
-}
-
 .container-fluid{
+    height: 40px;
     background-color: #3281ae !important;
-}
 
-.title-text-down{
-    font-size: 7px;
-    color: #fff ;
-}
+    div.logo-box{
+        margin-top: 5px;
+        height: 30px;
+        border-right: solid #fff 1px;
+        padding-right: 10px;
+    }
 
-.primera{
-    justify-content: space-between;
+    div.logo-box div.title-text-down{
+        font-size: 7px;
+        color: #fff ;
+    }
+
+    div.title-administration{
+        margin-left: 10px;
+        padding-right: 40px;
+    }
+
+    div.aling-items{
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        color: #fff;
+    }
+
+    div.ui-header{
+        justify-content: space-between;
+    }
+
+    div.icon-x{
+        height: 30px;
+        border-right: solid 1px #fff;
+    }
+
+    button.dropdown-toggle{
+        color: #fff;
+    }
 }
