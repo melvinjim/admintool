@@ -38,4 +38,41 @@
     button.dropdown-toggle{
         color: #fff;
     }
+
+    div.button-dropdown{
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+}
+
+section{
+    div.sep{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.sep .add-user{
+        display: flex;
+        align-items: center;
+        height: 35px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #48aeea;
+        border-color: #48aeea;
+    }
+
+    h5{
+        color: #48aeea;
+    }
+
+    div.sep div .text-administration{
+        font-size: 10px;
+        color: grey;
+    }
+
+    div.sep div .text-users{
+        color: #666666
+    }
+
 }
