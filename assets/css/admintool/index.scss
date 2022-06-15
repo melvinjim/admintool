@@ -89,6 +89,7 @@ section.section-filter{
     div.search-box{
         align-items: center;
         justify-content: space-between;
+        padding-top: 15px;
     }
 
     p{
@@ -99,5 +100,23 @@ section.section-filter{
     div div .filter-button{
         background-color: #ce5c36;
         color: #fff;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+    }
+
+    div div div .input-search{
+        width: 430px;
+        padding: 3px 0px 3px 8px;
+        border: none;
+        border-bottom: #808080 solid;
+    }
+
+    .input-search::placeholder{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+    }
+
+    div .hr-division{
+        width: 81pc;
     }
 }
