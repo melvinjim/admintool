@@ -1,10 +1,9 @@
-.container-fluid{
-    height: 40px;
+.container-header{
+    height: 60px;
     background-color: #3281ae !important;
 
     div.logo-box{
-        margin-top: 5px;
-        height: 30px;
+        height: 40px;
         border-right: solid #fff 1px;
         padding-right: 10px;
     }
@@ -28,9 +27,14 @@
 
     div.ui-header{
         justify-content: space-between;
+        padding-top: 9px;
     }
 
     div.icon-x{
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        font-size: 23px;
         height: 30px;
         border-right: solid 1px #fff;
     }
@@ -50,6 +54,8 @@ section{
     div.sep{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
     }
 
     div.sep .add-user{
@@ -75,4 +81,23 @@ section{
         color: #666666
     }
 
+}
+
+section.section-filter{
+    background-color: #fafafa;
+
+    div.search-box{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    div div .filter-button{
+        background-color: #ce5c36;
+        color: #fff;
+    }
 }
