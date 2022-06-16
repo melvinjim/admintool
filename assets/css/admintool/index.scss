@@ -155,6 +155,16 @@ section.worker-list{
         font-weight: 900;
     }
 
+    div.border-table{
+        border: solid #e8e8e8;
+        border-radius: 2px;
+        margin-bottom: 20px;
+    }
+
+    .table{
+        margin: 0;
+    }
+
     td .status-pending{
         border: solid #ce5c36;
         background-color: #ce5c36;
@@ -163,7 +173,6 @@ section.worker-list{
 
     table.table{
         background-color: #fff;
-        border: solid #80808047 1px;
     }
 
     td button.more{
@@ -213,12 +222,18 @@ section.worker-list{
     }
 }
 
-// footer{
-//     display: flex;
-//     justify-content: center;
-//     background-color: #383d43;
-//     height: 50px;
-//     div p.footer{
-//         color: #fff;
-//     }
-// }
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #383d43;
+    height: 70px;
+
+    div.container{
+        display: flex;
+        align-items: center;
+    }
+    div p.footer{
+        color: #fff;
+        margin: 0;
+    }
+}
