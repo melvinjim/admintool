@@ -56,6 +56,11 @@
         align-items: center;
         color: #fff;
     }
+
+    .dropdown-item:hover{
+        color: #ce5c36;
+        background-color: #fff !important;
+    }
 }
 
 section.section-management-user{
@@ -147,7 +152,7 @@ section.worker-list{
         border-bottom: #c2c2c2 solid;
     }
 
-    .input-search::placeholder{
+    .input-search::before{
         font: var(--fa-font-solid);
         content: "\f002";
     }
@@ -237,6 +242,14 @@ section.worker-list{
 
     .number-users{
         color: #4d525c;
+    }
+
+    td.status{
+        width: 150px;
+    }
+
+    td.options{
+        width: 50px;
     }
 }
 
