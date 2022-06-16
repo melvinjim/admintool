@@ -2,7 +2,6 @@
     background-color: #3281ae !important;
 
     div.border-box{
-        height: 40px;
         border-right: solid #fff 1px;
         padding-right: 14px;
     }
@@ -15,7 +14,6 @@
         display: flex;
         justify-content: end;
         font-size: 6px;
-        width: 140px;
         color: #fff;
     }
 
@@ -60,7 +58,7 @@
     }
 }
 
-section.section-gestion-user{
+section.section-management-user{
     background-color: #fff;
     padding: 13px 14px 13px 14px;
 
@@ -105,9 +103,23 @@ section.worker-list{
     div.search-box{
         align-items: center;
         justify-content: space-between;
-        padding-top: 15px;
+        padding: 20px 0px 20px 0px;
+        margin-bottom: 35px;
         border-bottom: solid #cccccc;
-        padding-bottom: 20px;
+    }
+
+    .dropdown-item:hover{
+        color: #ce5c36;
+        background-color: #fff !important;
+    }
+
+    .icons-table{
+        padding-left: 10px;
+        color: hsl(210deg 4% 58%);
+    }
+
+    .icons-table-updated{
+        color: hsl(210deg 4% 58%);
     }
 
     p{
@@ -143,6 +155,16 @@ section.worker-list{
         font-weight: 900;
     }
 
+    div.border-table{
+        border: solid #e8e8e8;
+        border-radius: 2px;
+        margin-bottom: 20px;
+    }
+
+    .table{
+        margin: 0;
+    }
+
     td .status-pending{
         border: solid #ce5c36;
         background-color: #ce5c36;
@@ -151,7 +173,6 @@ section.worker-list{
 
     table.table{
         background-color: #fff;
-        border: solid #80808047 1px;
     }
 
     td button.more{
@@ -201,12 +222,18 @@ section.worker-list{
     }
 }
 
-// footer{
-//     display: flex;
-//     justify-content: center;
-//     background-color: #383d43;
-//     height: 50px;
-//     div p.footer{
-//         color: #fff;
-//     }
-// }
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #383d43;
+    height: 70px;
+
+    div.container{
+        display: flex;
+        align-items: center;
+    }
+    div p.footer{
+        color: #fff;
+        margin: 0;
+    }
+}
