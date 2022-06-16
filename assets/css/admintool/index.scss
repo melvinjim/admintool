@@ -99,6 +99,7 @@ section.section-management-user{
 
 section.worker-list{
     background-color: #fafafa;
+    height: 560px;
 
     div.search-box{
         align-items: center;
@@ -118,8 +119,9 @@ section.worker-list{
         color: hsl(210deg 4% 58%);
     }
 
-    .icons-table-updated{
-        color: hsl(210deg 4% 58%);
+    .icons-table::before{
+        font: var(--fa-font-solid);
+        content: "\f0dc";
     }
 
     p{
@@ -130,8 +132,12 @@ section.worker-list{
     div div .filter-button{
         background-color: #ce5c36;
         color: #fff;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
+    }
+
+    .filter-button::before {
+        font: var(--fa-font-solid);
+        content: "\f0b0";
+        padding-right: 10px;
     }
 
     div div div .input-search{
@@ -142,17 +148,12 @@ section.worker-list{
     }
 
     .input-search::placeholder{
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
+        font: var(--fa-font-solid);
+        content: "\f002";
     }
 
     div .hr-division{
         width: 81pc;
-    }
-
-    div div table.table thead .column-table{
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
     }
 
     div.border-table{
@@ -173,6 +174,7 @@ section.worker-list{
 
     table.table{
         background-color: #fff;
+        color: #4a4f59;
     }
 
     td button.more{
@@ -231,6 +233,10 @@ section.worker-list{
         color: #fff;
         background-color: #48aeea;
         margin-left: 14px;
+    }
+
+    .number-users{
+        color: #4d525c;
     }
 }
 
