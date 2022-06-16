@@ -212,13 +212,25 @@ section.worker-list{
     }
 
     div div div p.number-user{
-        color: #808080;
+        color: #aaadb1;
     }
 
     div div div p.number-blue{
         color: #48aeea;
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    div.number-pages{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a.first-page{
+        display: initial;
+        color: #fff;
+        background-color: #48aeea;
+        margin-left: 14px;
     }
 }
 
