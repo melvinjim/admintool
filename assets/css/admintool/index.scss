@@ -1,14 +1,17 @@
 .container-header{
-    height: 60px;
     background-color: #3281ae !important;
 
-    div.logo-box{
+    div.border-box{
         height: 40px;
         border-right: solid #fff 1px;
-        padding-right: 10px;
+        padding-right: 14px;
     }
 
-    div.logo-box div.title-text-down{
+    .border-box img.image-logo{
+        width: 140px;
+    }
+
+    div.border-box div.title-text-down{
         font-size: 7px;
         color: #fff ;
     }
@@ -27,7 +30,7 @@
 
     div.ui-header{
         justify-content: space-between;
-        padding: 8px 75px 5px 66px;
+        padding: 20px;
     }
 
     div.icon-x{
@@ -41,6 +44,10 @@
 
     button.dropdown-toggle{
         color: #fff;
+    }
+
+    .dropdown-toggle::after {
+        vertical-align: 2px;
     }
 
     div.button-dropdown{
@@ -83,93 +90,93 @@ section{
 
 }
 
-section.section-filter{
-    background-color: #fafafa;
+// section.section-filter{
+//     background-color: #fafafa;
 
-    div.search-box{
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 15px;
-    }
+//     div.search-box{
+//         align-items: center;
+//         justify-content: space-between;
+//         padding-top: 15px;
+//     }
 
-    p{
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
+//     p{
+//         margin-top: 0px;
+//         margin-bottom: 0px;
+//     }
 
-    div div .filter-button{
-        background-color: #ce5c36;
-        color: #fff;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-    }
+//     div div .filter-button{
+//         background-color: #ce5c36;
+//         color: #fff;
+//         font-family: "Font Awesome 5 Free";
+//         font-weight: 900;
+//     }
 
-    div div div .input-search{
-        width: 430px;
-        padding: 3px 0px 3px 8px;
-        border: none;
-        border-bottom: #808080 solid;
-    }
+//     div div div .input-search{
+//         width: 430px;
+//         padding: 3px 0px 3px 8px;
+//         border: none;
+//         border-bottom: #808080 solid;
+//     }
 
-    .input-search::placeholder{
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-    }
+//     .input-search::placeholder{
+//         font-family: "Font Awesome 5 Free";
+//         font-weight: 900;
+//     }
 
-    div .hr-division{
-        width: 81pc;
-    }
+//     div .hr-division{
+//         width: 81pc;
+//     }
 
-    div div table.table thead .column-table{
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-    }
+//     div div table.table thead .column-table{
+//         font-family: "Font Awesome 5 Free";
+//         font-weight: 900;
+//     }
 
-    td .status-pending{
-        border: solid #ce5c36;
-        background-color: #ce5c36;
-        border-radius: 50%;
-    }
+//     td .status-pending{
+//         border: solid #ce5c36;
+//         background-color: #ce5c36;
+//         border-radius: 50%;
+//     }
 
-    table.table{
-        background-color: #fff;
-        border: solid #80808047 1px;
-    }
+//     table.table{
+//         background-color: #fff;
+//         border: solid #80808047 1px;
+//     }
 
-    td button.more{
-        height: 17px;
-        display: flex;
-        align-items: center;
-    }
+//     td button.more{
+//         height: 17px;
+//         display: flex;
+//         align-items: center;
+//     }
 
-    td a.active{
-        background-color: #48aeea;
-        font-size: 12px;
-        color: #fff;
-        border-radius: 30px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        width: 60px;
-    }
+//     td a.active{
+//         background-color: #48aeea;
+//         font-size: 12px;
+//         color: #fff;
+//         border-radius: 30px;
+//         height: 20px;
+//         display: flex;
+//         align-items: center;
+//         width: 60px;
+//     }
 
-    div div div p.number-user{
-        color: #808080;
-    }
+//     div div div p.number-user{
+//         color: #808080;
+//     }
 
-    div div div p.number-blue{
-        color: #48aeea;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-}
+//     div div div p.number-blue{
+//         color: #48aeea;
+//         margin-left: 5px;
+//         margin-right: 5px;
+//     }
+// }
 
-section.footer{
-    display: flex;
-    justify-content: center;
-    background-color: #383d43;
-    height: 50px;
-    div p.footer{
-        color: #fff;
-    }
-}
+// footer{
+//     display: flex;
+//     justify-content: center;
+//     background-color: #383d43;
+//     height: 50px;
+//     div p.footer{
+//         color: #fff;
+//     }
+// }
