@@ -114,7 +114,7 @@ section.section-management-user{
 
 section.worker-list{
     background-color: #fafafa;
-    height: 560px;
+    min-height: 100vh;
 
     div.search-box{
         align-items: center;
@@ -282,6 +282,14 @@ section.worker-list{
         align-items: center;
         justify-content: center;
     }
+
+    .other-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #4a4f59;
+        height: 23px;
+    }
 }
 
 footer{
@@ -289,6 +297,7 @@ footer{
     justify-content: center;
     background-color: #383d43;
     height: 70px;
+    margin-top: auto;
 
     div.container{
         display: flex;
