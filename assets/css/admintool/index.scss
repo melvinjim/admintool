@@ -2,7 +2,7 @@ header{
     background-color: #3281ae !important;
 
     div.border-box{
-        border-right: solid #fff 1px;
+        border-right: solid #ffffff4d 1px;
         padding-right: 14px;
     }
 
@@ -40,7 +40,7 @@ header{
         padding-right: 10px;
         font-size: 23px;
         height: 30px;
-        border-right: solid 1px #fff;
+        border-right: solid #ffffff4d 1px;
     }
 
     button.dropdown-toggle{
@@ -245,10 +245,13 @@ section.worker-list{
     }
 
     a.first-page{
-        display: initial;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #fff;
         background-color: #48aeea;
         margin-left: 14px;
+        height: 23px;
     }
 
     .number-users{
@@ -269,6 +272,15 @@ section.worker-list{
 
     .table > :not(:first-child) {
         border-top: 0px solid currentColor;
+    }
+
+    .color-gray{
+        color: #b5b7ba;
+    }
+
+    div.browse-page{
+        align-items: center;
+        justify-content: center;
     }
 }
 
