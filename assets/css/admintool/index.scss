@@ -1,4 +1,4 @@
-.container-header{
+header{
     background-color: #3281ae !important;
 
     div.border-box{
@@ -31,7 +31,7 @@
 
     div.ui-header{
         justify-content: space-between;
-        padding: 20px;
+        padding: 10px;
     }
 
     div.icon-x{
@@ -44,11 +44,21 @@
     }
 
     button.dropdown-toggle{
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+    
+    .dropdown-toggle:hover{
         color: #fff;
     }
 
     .dropdown-toggle::after {
         vertical-align: 2px;
+        padding-left: 4px;
+        border: 0;
+        font: var(--fa-font-solid);
+        content: "\f107";
     }
 
     div.button-dropdown{
