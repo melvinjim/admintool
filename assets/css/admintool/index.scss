@@ -35,18 +35,22 @@ header{
     }
 
     div.icon-x{
-        display: flex;
-        align-items: center;
         padding-right: 10px;
         font-size: 23px;
-        height: 30px;
-        border-right: solid #ffffff4d 1px;
     }
 
     button.dropdown-toggle{
         display: flex;
         align-items: center;
         color: #fff;
+    }
+
+    button.dropdown-name{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        height: 39.8px;
+        border-left: solid #ffffff4d 1px;
     }
     
     .dropdown-toggle:hover{
@@ -73,7 +77,7 @@ header{
     }
 }
 
-section.section-management-user{
+section.management-user{
     background-color: #fff;
     padding: 13px 14px 13px 14px;
 
@@ -83,7 +87,7 @@ section.section-management-user{
     }
 
     .icon{
-        color: #808080;
+        color: #80808075;
     }
 
     div.add-users .add-user{
@@ -102,7 +106,7 @@ section.section-management-user{
 
     div.add-users div .text-administration{
         font-size: 13px;
-        color: #808080;
+        color: #80808075;
     }
 
     div.add-users div .text-users{
@@ -112,7 +116,7 @@ section.section-management-user{
 
 }
 
-section.worker-list{
+section.employees-list{
     background-color: #fafafa;
     min-height: 100vh;
 
@@ -121,7 +125,7 @@ section.worker-list{
         justify-content: space-between;
         padding: 20px 0px 20px 0px;
         margin-bottom: 35px;
-        border-bottom: solid #cccccc;
+        border-bottom: solid #c2c2c27d;
     }
 
     .dropdown-item:hover{
@@ -159,7 +163,7 @@ section.worker-list{
         width: 430px;
         padding: 3px 0px 3px 8px;
         border: none;
-        border-bottom: #c2c2c2 solid;
+        border-bottom: #c2c2c27d solid;
     }
 
     .input-search::before{
@@ -193,44 +197,47 @@ section.worker-list{
         color: #4a4f59;
     }
 
+    table.table tbody tr td {
+        border-top: 0;
+        padding: 14px;
+    }
+
     td button.more{
+        font-size: 20px;
         height: 17px;
         display: flex;
         align-items: center;
     }
 
-    td a.active{
+    td span.active{
         display: initial;
         background-color: #48aeea;
         font-size: 12px;
         color: #fff;
         border-radius: 30px;
-        height: 20px;
-        width: 60px;
+        padding: 5px 10px 5px 10px;
     }
 
-    td a.inactive{
+    td span.inactive{
         display: initial;
         background-color: #808080;
         font-size: 12px;
         color: #fff;
         border-radius: 30px;
-        height: 20px;
-        width: 60px;
+        padding: 5px 10px 5px 10px;
     }
 
-    td a.pending{
+    td span.pending{
         display: initial;
         background-color: #ce5c36;
         font-size: 12px;
         color: #fff;
         border-radius: 30px;
-        height: 20px;
-        width: 60px;
+        padding: 5px 10px 5px 10px;
     }
 
     div div div p.number-user{
-        color: #636363;
+        color: #afb2b6;
     }
 
     div div div p.number-blue{
@@ -289,6 +296,10 @@ section.worker-list{
         justify-content: center;
         color: #4a4f59;
         height: 23px;
+    }
+
+    table thead tr.column-table th{
+        padding: 15px;
     }
 }
 
