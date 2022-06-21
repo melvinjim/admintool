@@ -1,4 +1,3 @@
 <%
-# You can add your migration from this point. For example:
-# drop_table("employees")
+drop_table("employees")
 %>
