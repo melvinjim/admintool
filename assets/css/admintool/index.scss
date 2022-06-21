@@ -1,3 +1,8 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 header{
     background-color: #3281ae !important;
 
@@ -130,11 +135,9 @@ section.management-user{
 
 section.employees-list{
     background-color: #fafafa;
-    margin: 0;
-    padding-bottom: 20px;
-    display: flex;
-    min-height: 71vh;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
+    min-height: 78vh;
+    
 
     .input-icons i {
         position: absolute;
@@ -324,7 +327,9 @@ footer{
     justify-content: center;
     background-color: #383d43;
     height: 70px;
-    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 
     div.container{
         display: flex;
