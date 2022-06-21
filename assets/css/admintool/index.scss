@@ -189,17 +189,15 @@ section.employees-list{
         border-bottom: #c2c2c27d solid;
     }
 
-    ::placeholder { color: #c5c5c5; }
+    ::placeholder { 
+        color: #c5c5c5; 
+    }
 
     div.border-table{
         border: solid #e8e8e8;
-        border-radius: 2px;
+        border-radius: 5px;
         margin-bottom: 20px;
         border-bottom: 0px;
-    }
-
-    .table{
-        margin: 0;
     }
 
     td .status-pending{
@@ -209,8 +207,10 @@ section.employees-list{
     }
 
     table.table{
+        margin: 0;
         background-color: #fff;
         color: #4a4f59;
+        border-radius: 5px;
     }
 
     table.table tbody tr td {
