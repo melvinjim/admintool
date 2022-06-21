@@ -57,9 +57,21 @@ header{
         color: #fff;
     }
 
+    .dropdown-name:hover{
+        color: #fff;
+    }
+
     .dropdown-toggle::after {
         vertical-align: 2px;
         padding-left: 4px;
+        border: 0;
+        font: var(--fa-font-solid);
+        content: "\f107";
+    }
+
+    .dropdown-name::after {
+        vertical-align: 2px;
+        padding-left: 6px;
         border: 0;
         font: var(--fa-font-solid);
         content: "\f107";
@@ -118,7 +130,18 @@ section.management-user{
 
 section.employees-list{
     background-color: #fafafa;
-    min-height: 70vh;
+    margin: 0;
+    padding-bottom: 20px;
+    display: flex;
+    min-height: 71vh;
+    flex-wrap: wrap;
+
+    .input-icons i {
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 400px;
+        color: #c5c5c5;
+    }
 
     div.search-box{
         align-items: center;
@@ -166,14 +189,7 @@ section.employees-list{
         border-bottom: #c2c2c27d solid;
     }
 
-    .input-search::before{
-        font: var(--fa-font-solid);
-        content: "\f002";
-    }
-
-    div .hr-division{
-        width: 81pc;
-    }
+    ::placeholder { color: #c5c5c5; }
 
     div.border-table{
         border: solid #e8e8e8;
@@ -308,7 +324,7 @@ footer{
     justify-content: center;
     background-color: #383d43;
     height: 70px;
-    margin-top: auto;
+    align-self: flex-end;
 
     div.container{
         display: flex;
