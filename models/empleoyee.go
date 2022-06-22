@@ -8,7 +8,7 @@ import (
 
 type Employee struct {
 	ID          uuid.UUID `json:"id" db:"id"`
-	Name        string    `json:"file_name" db:"file_name"`
+	Name        string    `json:"name" db:"name"`
 	Email       string    `json:"email" db:"email"`
 	Admin       string    `json:"admin" db:"admin"`
 	Employee    string    `json:"employee" db:"employee"`
