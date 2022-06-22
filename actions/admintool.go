@@ -9,7 +9,6 @@ import (
 )
 
 func Admintool(c buffalo.Context) error {
-
 	employees := []models.Employee{}
 
 	tx := c.Value("tx").(*pop.Connection)
