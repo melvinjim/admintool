@@ -23,3 +23,7 @@ func Admintool(c buffalo.Context) error {
 
 	return c.Render(http.StatusOK, r.HTML("admintool/index.plush.html"))
 }
+
+func AddUser(c buffalo.Context) error {
+	return c.Render(http.StatusOK, r.HTML("admintool/add.plush.html"))
+}
