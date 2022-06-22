@@ -64,6 +64,7 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", Admintool)
+		app.POST("create-employee", CreateEmployees)
 
 		app.ServeFiles("/", http.FS(public.FS())) // serve files from the public directory
 	}
