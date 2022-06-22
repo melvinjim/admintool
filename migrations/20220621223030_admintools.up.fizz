@@ -1,0 +1,10 @@
+<%
+create_table("employees") {
+  t.Column("id", "uuid", {primary: true})
+  t.Column("name", "string", {})
+  t.Column("email", "string", {})
+  t.Column("admin", "string", {})
+  t.Column("employee", "string", {})
+  t.Column("last_updated", "string", {})
+}
+%>
