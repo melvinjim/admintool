@@ -60,7 +60,7 @@ section.add-new-user{
 section.fill-form{
     background-color: #fafafa;
     min-height: 85vh;
-    padding-top: 30px;
+    padding: 40px 0 40px 0;
 
     .form{
         background-color: #fff;
@@ -72,6 +72,7 @@ section.fill-form{
     }
 
     div.container div hr.pull-apart{
+        color: #80808096;
         width: 85%;
     }
 
@@ -131,6 +132,7 @@ section.fill-form{
         width: 70%;
         border: none;
         border-bottom: 1px solid #aaacb1;
+        outline: 0px;
     }
 
     .form-check {
@@ -144,9 +146,23 @@ section.fill-form{
     div.container div p.text-flags{
         color: #4b4f58;
         margin-right: 85px;
+        margin-bottom: 0px;
     }
 
     select.form-select{
         width: 71%;
+    }
+
+    .options-clients{
+        color: #4b4f58;
+    }
+
+
+    .information-message{
+        border-top: 1px solid #ededed;
+        font-size: 14px;
+        padding-left: 6px;
+        color: #bfbfbf;
+        padding-top: 5px;
     }
 }
