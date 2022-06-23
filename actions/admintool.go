@@ -20,7 +20,7 @@ func Admintool(c buffalo.Context) error {
 
 	c.Set("employees", employees)
 
-	return c.Render(http.StatusOK, r.HTML("employees/index.plush.html"))
+	return c.Render(http.StatusOK, r.HTML("users/index.plush.html"))
 }
 
 func AddUser(c buffalo.Context) error {
