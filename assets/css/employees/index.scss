@@ -3,6 +3,10 @@ section.management-user{
     padding: 13px 14px 13px 14px;
     min-height: 5vh;
 
+    a{
+        text-decoration: none;
+    }
+
     div.add-users{
         justify-content: space-between;
         align-items: center;
