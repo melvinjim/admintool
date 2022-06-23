@@ -46,7 +46,7 @@ section.add-new-user{
         color: #80808075;
     }
 
-    div.add-users div .new-user{
+    span.new-users{
         font-size: 13px;
         color: #636363;
     }
@@ -76,6 +76,21 @@ section.fill-form{
     }
 
     span.requerid{
-        color: #b82020;
+        color: #b82020 !important;
+    }
+
+    .pull-form{
+        align-items: center;
+    }
+
+    .data-to-fill{
+        margin: 10px 153px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .inputs{
+        width: 70%;
+        border: none;
+        border-bottom: 1px solid #aaacb1;
     }
 }
