@@ -71,30 +71,57 @@
 <section class="fill-form">
     <div class="container form p-4">
         <div class="container">
-            <div class="d-flex">
-                <p class="text-information">USER INFORMATION</p>
-                <hr class="pull-apart">
-            </div>
-            <div class="d-flex pull-form">
-                <p class="data-to-fill">Name:<span class="requerid">*</span></p>
-                <input class="inputs" type="text" autofocus>
-            </div>
-            <div class="d-flex pull-form">
-                <p class="data-to-fill">Email:<span class="requerid">*</span></p>
-                <input class="inputs" type="text" autofocus>
-            </div>
-            <div class="d-flex pull-form">
-                <p class="data-to-fill">Work Telephone:<span class="requerid">*</span></p>
-                <input class="inputs" type="text" autofocus>
-            </div>
-            <div class="d-flex pull-form">
-                <p class="data-to-fill">Mobile Telephone:</p>
-                <input class="inputs" type="text" autofocus>
-            </div>
-            <div class="d-flex pull-form">
-                <p class="data-to-fill">Fax Number</p>
-                <input class="inputs" type="text" autofocus>
-            </div>
+            <form>
+                <div class="d-flex">
+                    <p class="text-information">USER INFORMATION</p>
+                    <hr class="pull-apart">
+                </div>
+                <div class="d-flex pull-form">
+                    <p class="data-to-fill-name">Name:<span class="requerid">*</span></p>
+                    <input class="inputs" type="text" autofocus>
+                </div>
+                <div class="d-flex pull-form">
+                    <p class="data-to-fill">Email:<span class="requerid">*</span></p>
+                    <input class="inputs" type="text">
+                </div>
+                <div class="d-flex pull-form">
+                    <p class="data-to-fill-work-t">Work Telephone:<span class="requerid">*</span></p>
+                    <input class="inputs" type="text">
+                </div>
+                <div class="d-flex pull-form">
+                    <p class="data-to-fill-m-t">Mobile Telephone:</p>
+                    <input class="inputs" type="text">
+                </div>
+                <div class="d-flex pull-form">
+                    <p class="data-to-fill-fax">Fax Number:</p>
+                    <input class="inputs" type="text">
+                </div>
+                <div class="d-flex pull-form">
+                    <p class="data-to-fill-contact">Contact Type:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                        <label class="form-check-label" for="gridRadios1">
+                          Compensation
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                          Relocation
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                          Travel
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex text-user-flags">
+                    <p class="text-flags">USER FLAGS</p>
+                    <hr class="pull-apart">
+                </div>
+            </form>
         </div>
     </div>
 </section>
