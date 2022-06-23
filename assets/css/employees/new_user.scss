@@ -112,6 +112,20 @@ section.fill-form{
         margin: 10px 101px 12px 0px;
         color: #4b4f58;
     }
+    .data-to-fill-admin{
+        margin: 10px 73px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .data-to-fill-employer{
+        margin: 10px 125px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .data-to-fill-client{
+        margin: 10px 87px 12px 0px;
+        color: #4b4f58;
+    }
 
     .inputs{
         width: 70%;
@@ -130,5 +144,9 @@ section.fill-form{
     div.container div p.text-flags{
         color: #4b4f58;
         margin-right: 85px;
+    }
+
+    select.form-select{
+        width: 71%;
     }
 }
