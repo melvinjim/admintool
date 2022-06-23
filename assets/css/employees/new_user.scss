@@ -83,8 +83,33 @@ section.fill-form{
         align-items: center;
     }
 
+    .data-to-fill-name{
+        margin: 10px 150px 12px 0px;
+        color: #4b4f58;
+    }
+
     .data-to-fill{
         margin: 10px 153px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .data-to-fill-work-t{
+        margin: 10px 75px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .data-to-fill-m-t{
+        margin: 10px 71px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .data-to-fill-fax{
+        margin: 10px 112px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .data-to-fill-contact{
+        margin: 10px 101px 12px 0px;
         color: #4b4f58;
     }
 
@@ -92,5 +117,18 @@ section.fill-form{
         width: 70%;
         border: none;
         border-bottom: 1px solid #aaacb1;
+    }
+
+    .form-check {
+        padding-right: 30px;
+    }
+
+    .text-user-flags{
+        margin-top: 20px;
+    }
+
+    div.container div p.text-flags{
+        color: #4b4f58;
+        margin-right: 85px;
     }
 }
