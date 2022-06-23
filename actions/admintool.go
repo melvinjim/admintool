@@ -24,5 +24,5 @@ func Admintool(c buffalo.Context) error {
 }
 
 func AddUser(c buffalo.Context) error {
-	return c.Render(http.StatusOK, r.HTML("admintool/add.plush.html"))
+	return c.Render(http.StatusOK, r.HTML("admintool/new_user.plush.html"))
 }

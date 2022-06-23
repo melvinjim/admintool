@@ -1,0 +1,81 @@
+section.add-new-user{
+    background-color: #fff;
+    padding: 13px 14px 13px 14px;
+    min-height: 5vh;
+
+    div.add-users{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icon{
+        color: #80808075;
+    }
+
+    div.add-users .save-user{
+        display: flex;
+        align-items: center;
+        height: 35px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #48aeea;
+        border-color: #48aeea;
+    }
+
+    div.add-users .cancel{
+        display: flex;
+        align-items: center;
+        height: 35px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #aaacb1;
+        border-color: #aaacb1;
+    }
+
+    h4{
+        color: #48aeea;
+    }
+
+    div.add-users div .text-administration{
+        font-size: 13px;
+        color: #80808075;
+    }
+
+    div.add-users div .text-users{
+        font-size: 13px;
+        color: #80808075;
+    }
+
+    div.add-users div .new-user{
+        font-size: 13px;
+        color: #636363;
+    }
+
+    .buttons-new-user{
+        display: flex;
+    }
+
+}
+
+section.fill-form{
+    background-color: #fafafa;
+    min-height: 85vh;
+    padding-top: 30px;
+
+    .form{
+        background-color: #fff;
+    }
+
+    div.container div p.text-information{
+        color: #4b4f58;
+        margin-right: 30px;
+    }
+
+    div.container div hr.pull-apart{
+        width: 85%;
+    }
+
+    span.requerid{
+        color: #b82020;
+    }
+}
