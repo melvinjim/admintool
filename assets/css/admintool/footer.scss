@@ -1,0 +1,16 @@
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #383d43;
+    padding: 30px 0;
+    min-height: 5vh;
+
+    div.container{
+        display: flex;
+        align-items: center;
+    }
+    div p.footer{
+        color: #fff;
+        margin: 0;
+    }
+}
