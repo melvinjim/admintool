@@ -26,3 +26,7 @@ func Admintool(c buffalo.Context) error {
 func AddUser(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("users/new.plush.html"))
 }
+
+func ReceiveData(c buffalo.Context) error {
+	return c.Redirect(http.StatusSeeOther, "/users/new")
+}

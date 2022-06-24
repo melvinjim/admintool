@@ -65,6 +65,7 @@ func App() *buffalo.App {
 
 		app.GET("/", Admintool)
 		app.GET("/users/new", AddUser)
+		app.POST("/receive-data", ReceiveData)
 
 		app.ServeFiles("/", http.FS(public.FS())) // serve files from the public directory
 	}

@@ -63,7 +63,7 @@
         </div>
         <div class="buttons-new-user">
             <a href="/" class="cancel btn">Cancel</a>
-            <a href="#" class="save-user btn">Save User</a>
+            <button type="submit" class="save-user btn" form="new-user">Save User</button>
         </div>
     </div>
 </section>
@@ -71,47 +71,47 @@
 <section class="fill-form">
     <div class="container form p-4">
         <div class="container">
-            <form>
+            <%= form({id:"new-user", action: receiveDataPath(), enctype:"multipart/form-data", method: "POST"}) { %> 
                 <div class="d-flex">
                     <p class="text-information">USER INFORMATION</p>
                     <hr class="pull-apart">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-name">Name:<span class="requerid">*</span></p>
-                    <input class="inputs" type="text" autofocus>
+                    <input class="inputs" type="text" name="information" autofocus>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill">Email:<span class="requerid">*</span></p>
-                    <input class="inputs" type="text">
+                    <input class="inputs" type="email" name="information">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-work-t">Work Telephone:<span class="requerid">*</span></p>
-                    <input class="inputs" type="text">
+                    <input class="inputs" type="number" name="information">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-m-t">Mobile Telephone:</p>
-                    <input class="inputs" type="text">
+                    <input class="inputs" type="number" name="information">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-fax">Fax Number:</p>
-                    <input class="inputs" type="text">
+                    <input class="inputs" type="text" name="information">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-contact">Contact Type:</p>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                        <input class="form-check-input" type="radio" name="information" id="gridRadios1" value="Compensation">
                         <label class="form-check-label" for="gridRadios1">
                           Compensation
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <input class="form-check-input" type="radio" name="information" id="gridRadios2" value="Relocation">
                         <label class="form-check-label" for="gridRadios2">
                           Relocation
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <input class="form-check-input" type="radio" name="information" id="gridRadios3" value="Travel">
                         <label class="form-check-label" for="gridRadios3">
                           Travel
                         </label>
@@ -124,13 +124,13 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-admin">Is Internal Admin?</p>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault"></label>
+                        <input class="form-check-input" type="checkbox" role="switch" id="admin" name="information">
+                        <label class="form-check-label" for="admin"></label>
                     </div>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-employer">Employer:</p>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="information">
                         <option selected>Select Employer</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="d-flex pull-form mt-3">
                     <p class="data-to-fill-client">Accsess Client:</p>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" name="information">
                         <option selected class="options-clients">Select Clients</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -149,7 +149,7 @@
                 <div class="information-message mt-5">
                     <p><span class="requerid">*</span> Fields with this symbol are required.</p>
                 </div>
-            </form>
+            <% } %>
         </div>
     </div>
 </section>
