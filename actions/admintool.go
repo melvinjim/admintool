@@ -2,6 +2,7 @@ package actions
 
 import (
 	"admintool/models"
+	"fmt"
 	"net/http"
 
 	"github.com/gobuffalo/buffalo"
@@ -28,5 +29,8 @@ func AddUser(c buffalo.Context) error {
 }
 
 func ReceiveData(c buffalo.Context) error {
+
+	fmt.Println("llegó")
+
 	return c.Redirect(http.StatusSeeOther, "/users/new")
 }
