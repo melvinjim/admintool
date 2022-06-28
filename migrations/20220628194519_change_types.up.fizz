@@ -1,0 +1,4 @@
+<%
+change_column("employees", "work_telephone", "string", {})
+change_column("employees", "mobile_telephone", "string", {})
+%>

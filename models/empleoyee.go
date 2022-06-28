@@ -10,8 +10,8 @@ type Employee struct {
 	ID              uuid.UUID `form:"id" db:"id"`
 	Name            string    `form:"name" db:"name"`
 	Email           string    `form:"email" db:"email"`
-	WorkTelephone   int       `form:"work_telephone" db:"work_telephone"`
-	MobileTelephone int       `form:"mobile_telephone" db:"mobile_telephone"`
+	WorkTelephone   string    `form:"work_telephone" db:"work_telephone"`
+	MobileTelephone string    `form:"mobile_telephone" db:"mobile_telephone"`
 	Fax             string    `form:"fax_number" db:"fax"`
 	ContacType      string    `form:"contac_type" db:"contac_type"`
 	InternalAdmin   string    `form:"internal_admin" db:"internal_admin"`
