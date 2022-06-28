@@ -16,3 +16,15 @@ type Employee struct {
 	CreatedAt   time.Time `json:"created_at" db:"created_at"`
 	UpdatedAt   time.Time `json:"updated_at" db:"updated_at"`
 }
+
+type User struct {
+	Name            string `form:"name"`
+	Email           string
+	Telephone       string `form:"work-telephone"`
+	MobileTelephone string `form:"mobile-telephone"`
+	Fax             string `form:"fax-number"`
+	ContacType      string `form:"contac-type"`
+	InternalAdmin   string `form:"internal-admin"`
+	Employer        string `form:"employer"`
+	AccsessClient   string `form:"accsess-client"`
+}

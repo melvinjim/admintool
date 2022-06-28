@@ -2,6 +2,7 @@ package actions
 
 import (
 	"admintool/models"
+	"fmt"
 	"net/http"
 
 	"github.com/gobuffalo/buffalo"
@@ -28,5 +29,21 @@ func AddUser(c buffalo.Context) error {
 }
 
 func ReceiveData(c buffalo.Context) error {
+
+	u := &models.User{}
+	if err := c.Bind(u); err != nil {
+		return err
+	}
+
+	fmt.Println("Nombre:", u.Name)
+	fmt.Println("Email:", u.Email)
+	fmt.Println("Work telephone:", u.Telephone)
+	fmt.Println("Mobile Telephone:", u.MobileTelephone)
+	fmt.Println("Fax:", u.Fax)
+	fmt.Println("Contact Type:", u.ContacType)
+	fmt.Println("Is Internal Admin:", u.InternalAdmin)
+	fmt.Println("Employer:", u.Employer)
+	fmt.Println("Accsess Client:", u.AccsessClient)
+
 	return c.Redirect(http.StatusSeeOther, "/users/new")
 }
