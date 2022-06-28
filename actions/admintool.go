@@ -34,25 +34,6 @@ func ReceiveData(c buffalo.Context) error {
 		return err
 	}
 
-	newUser := models.Employee{
-		Name: u.Name,
-		Email: u.Email,
-		WorkTelephone: u.WorkTelephone,
-		MobileTelephone: u.MobileTelephone,
-		Fax: u.Fax,
-		ContacType: u.ContacType,
-		InternalAdmin: u.InternalAdmin,
-		Employer: u.Employer,
-		AccsessClient: u.AccsessClient,
-	}	
-
-	tx := c.Value("tx").(*pop.Connection)
-
-	err := tx.Create(&newUser)
-	if err != nil {
-		return err
-	}
-
 	fmt.Println("Nombre:", u.Name)
 	fmt.Println("Email:", u.Email)
 	fmt.Println("Work telephone:", u.WorkTelephone)

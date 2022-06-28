@@ -17,7 +17,7 @@ type Employee struct {
 	InternalAdmin   string    `form:"internal_admin" db:"internal_admin"`
 	Employer        string    `form:"employer" db:"employer"`
 	AccsessClient   string    `form:"accsess_client" db:"accsess_client"`
-	Admi            string    `form:"admin" db:"admin"`
+	Admin           string    `form:"admin" db:"admin"`
 	LastUpdated     string    `form:"last_updated" db:"last_updated"`
 	CreatedAt       time.Time `form:"created_at" db:"created_at"`
 	UpdatedAt       time.Time `form:"updated_at" db:"updated_at"`
