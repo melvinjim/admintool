@@ -1,0 +1,9 @@
+<%
+add_column("employees", "work_telephone", "INTEGER", {})
+add_column("employees", "mobile_telephone", "INTEGER", {})
+add_column("employees", "fax", "string", {})
+add_column("employees", "contac_type", "string", {})
+add_column("employees", "internal_admin", "string", {})
+add_column("employees", "employer", "string", {})
+add_column("employees", "accsess_client", "string", {})
+%>

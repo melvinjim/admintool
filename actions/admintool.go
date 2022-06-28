@@ -29,21 +29,27 @@ func AddUser(c buffalo.Context) error {
 }
 
 func ReceiveData(c buffalo.Context) error {
+	u := models.Employee{}
+	if err := c.Bind(&u); err != nil {
+		return err
+	}
 
-	u := &models.User{}
-	if err := c.Bind(u); err != nil {
+	tx := c.Value("tx").(*pop.Connection)
+
+	err := tx.Create(&u)
+	if err != nil {
 		return err
 	}
 
 	fmt.Println("Nombre:", u.Name)
 	fmt.Println("Email:", u.Email)
-	fmt.Println("Work telephone:", u.Telephone)
+	fmt.Println("Work telephone:", u.WorkTelephone)
 	fmt.Println("Mobile Telephone:", u.MobileTelephone)
 	fmt.Println("Fax:", u.Fax)
 	fmt.Println("Contact Type:", u.ContacType)
 	fmt.Println("Is Internal Admin:", u.InternalAdmin)
 	fmt.Println("Employer:", u.Employer)
-	fmt.Println("Accsess Client:", u.AccsessClient)
+	fmt.Println("Access Client:", u.AccessClient)
 
-	return c.Redirect(http.StatusSeeOther, "/users/new")
+	return c.Redirect(http.StatusSeeOther, "/")
 }

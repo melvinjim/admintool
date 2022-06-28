@@ -1,0 +1,9 @@
+<%
+drop_column("employees", "work_telephone")
+drop_column("employees", "mobile_telephone")
+drop_column("employees", "fax")
+drop_column("employees", "contac_type")
+drop_column("employees", "internal_admin")
+drop_column("employees", "employer")
+drop_column("employees", "accsess_client")
+%>
