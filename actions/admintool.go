@@ -29,8 +29,15 @@ func AddUser(c buffalo.Context) error {
 }
 
 func ReceiveData(c buffalo.Context) error {
-	u := &models.Employee{}
-	if err := c.Bind(u); err != nil {
+	u := models.Employee{}
+	if err := c.Bind(&u); err != nil {
+		return err
+	}
+
+	tx := c.Value("tx").(*pop.Connection)
+
+	err := tx.Create(&u)
+	if err != nil {
 		return err
 	}
 
@@ -42,7 +49,7 @@ func ReceiveData(c buffalo.Context) error {
 	fmt.Println("Contact Type:", u.ContacType)
 	fmt.Println("Is Internal Admin:", u.InternalAdmin)
 	fmt.Println("Employer:", u.Employer)
-	fmt.Println("Accsess Client:", u.AccsessClient)
+	fmt.Println("Access Client:", u.AccessClient)
 
 	return c.Redirect(http.StatusSeeOther, "/")
 }

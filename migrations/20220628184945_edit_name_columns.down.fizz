@@ -1,0 +1,3 @@
+<%
+rename_column("employees", "access_client", "accsess_client")
+%>

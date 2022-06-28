@@ -16,7 +16,7 @@ type Employee struct {
 	ContacType      string    `form:"contac_type" db:"contac_type"`
 	InternalAdmin   string    `form:"internal_admin" db:"internal_admin"`
 	Employer        string    `form:"employer" db:"employer"`
-	AccsessClient   string    `form:"accsess_client" db:"accsess_client"`
+	AccessClient    string    `form:"access_client" db:"access_client"`
 	Admin           string    `form:"admin" db:"admin"`
 	LastUpdated     string    `form:"last_updated" db:"last_updated"`
 	CreatedAt       time.Time `form:"created_at" db:"created_at"`
