@@ -71,7 +71,7 @@
 <section class="fill-form">
     <div class="container form p-4">
         <div class="container">
-            <%= form({id:"new-user", action: receiveDataPath(), enctype:"multipart/form-data", method: "POST"}) { %> 
+            <%= form({id:"new-user", action: receiveDataPath(), method: "POST"}) { %> 
                 <div class="d-flex">
                     <p class="text-information">USER INFORMATION</p>
                     <hr class="pull-apart">
@@ -86,11 +86,11 @@
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-work-t">Work Telephone:<span class="requerid">*</span></p>
-                    <input class="inputs" type="number" name="work-telephone">
+                    <input class="inputs" type="number" name="work_telephone">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-m-t">Mobile Telephone:</p>
-                    <input class="inputs" type="number" name="mobile-telephone">
+                    <input class="inputs" type="number" name="mobile_telephone">
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-fax">Fax Number:</p>
@@ -99,19 +99,19 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-contact">Contact Type:</p>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="contac-type" id="gridRadios1" value="Compensation">
+                        <input class="form-check-input" type="radio" name="contac_type" id="gridRadios1" value="Compensation">
                         <label class="form-check-label" for="gridRadios1">
                           Compensation
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="contac-type" id="gridRadios2" value="Relocation">
+                        <input class="form-check-input" type="radio" name="contac_type" id="gridRadios2" value="Relocation">
                         <label class="form-check-label" for="gridRadios2">
                           Relocation
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="contac-type" id="gridRadios3" value="Travel">
+                        <input class="form-check-input" type="radio" name="contac_type" id="gridRadios3" value="Travel">
                         <label class="form-check-label" for="gridRadios3">
                           Travel
                         </label>
@@ -124,7 +124,7 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-admin">Is Internal Admin?</p>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="admin" name="internal-admin">
+                        <input class="form-check-input" type="checkbox" role="switch" id="admin" name="internal_admin">
                         <label class="form-check-label" for="admin"></label>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="d-flex pull-form mt-3">
                     <p class="data-to-fill-client">Accsess Client:</p>
-                    <select class="form-select" aria-label="Default select example" name="accsess-client">
+                    <select class="form-select" aria-label="Default select example" name="accsess_client">
                         <option selected class="options-clients">Select Clients</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>

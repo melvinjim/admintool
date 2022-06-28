@@ -7,24 +7,18 @@ import (
 )
 
 type Employee struct {
-	ID          uuid.UUID `json:"id" db:"id"`
-	Name        string    `json:"name" db:"name"`
-	Email       string    `json:"email" db:"email"`
-	Admin       string    `json:"admin" db:"admin"`
-	Employee    string    `json:"employee" db:"employee"`
-	LastUpdated string    `json:"last_updated" db:"last_updated"`
-	CreatedAt   time.Time `json:"created_at" db:"created_at"`
-	UpdatedAt   time.Time `json:"updated_at" db:"updated_at"`
-}
-
-type User struct {
-	Name            string `form:"name"`
-	Email           string
-	Telephone       string `form:"work-telephone"`
-	MobileTelephone string `form:"mobile-telephone"`
-	Fax             string `form:"fax-number"`
-	ContacType      string `form:"contac-type"`
-	InternalAdmin   string `form:"internal-admin"`
-	Employer        string `form:"employer"`
-	AccsessClient   string `form:"accsess-client"`
+	ID              uuid.UUID `form:"id" db:"id"`
+	Name            string    `form:"name" db:"name"`
+	Email           string    `form:"email" db:"email"`
+	WorkTelephone   int       `form:"work_telephone" db:"work_telephone"`
+	MobileTelephone int       `form:"mobile_telephone" db:"mobile_telephone"`
+	Fax             string    `form:"fax_number" db:"fax"`
+	ContacType      string    `form:"contac_type" db:"contac_type"`
+	InternalAdmin   string    `form:"internal_admin" db:"internal_admin"`
+	Employer        string    `form:"employer" db:"employer"`
+	AccsessClient   string    `form:"accsess_client" db:"accsess_client"`
+	Admi            string    `form:"admin" db:"admin"`
+	LastUpdated     string    `form:"last_updated" db:"last_updated"`
+	CreatedAt       time.Time `form:"created_at" db:"created_at"`
+	UpdatedAt       time.Time `form:"updated_at" db:"updated_at"`
 }
