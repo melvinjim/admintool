@@ -8,7 +8,7 @@ import (
 	"github.com/gobuffalo/pop/v6"
 )
 
-func Admintool(c buffalo.Context) error {
+func ListEmployees(c buffalo.Context) error {
 	employees := []models.Employee{}
 
 	tx := c.Value("tx").(*pop.Connection)
@@ -30,7 +30,7 @@ func AddUser(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("users/new.plush.html"))
 }
 
-func ReceiveData(c buffalo.Context) error {
+func Create(c buffalo.Context) error {
 	employee := models.Employee{}
 	if err := c.Bind(&employee); err != nil {
 		return err
