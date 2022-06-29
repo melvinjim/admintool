@@ -75,7 +75,7 @@
                 <p class="text-information">USER INFORMATION</p>
                 <hr class="pull-apart">
             </div>
-            <%= form({id:"new-user", action: receiveDataPath(), method: "POST"}) { %> 
+            <%= form({id:"new-user", action: createEmployeesPath(), method: "POST"}) { %> 
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-name">Name:<span class="requerid">*</span></p>
                     <%= f.InputTag({name:"name", value: employee.Name, class:"inputs" }) %>
