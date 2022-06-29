@@ -30,7 +30,7 @@ func AddUser(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("users/new.plush.html"))
 }
 
-func Create(c buffalo.Context) error {
+func CreateEmployees(c buffalo.Context) error {
 	employee := models.Employee{}
 	if err := c.Bind(&employee); err != nil {
 		return err
