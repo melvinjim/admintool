@@ -128,18 +128,20 @@ section.fill-form{
     }
 
     .data-to-fill-client{
-        margin: 10px 87px 12px 0px;
+        margin: 10px 94px 12px 0px;
         color: #4b4f58;
     }
 
     .inputs{
-        width: 70%;
+        width: 900px;
         border: none;
         border-bottom: 1px solid #aaacb1;
-        outline: 0px;
+        outline: none;
+        border-radius: 0;
     }
 
     .form-check {
+        display: flex;
         padding-right: 30px;
     }
 
@@ -154,7 +156,7 @@ section.fill-form{
     }
 
     select.form-select{
-        width: 71%;
+        width: 900px;
     }
 
     .options-clients{

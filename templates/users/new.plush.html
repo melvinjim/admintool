@@ -71,47 +71,47 @@
 <section class="fill-form">
     <div class="container form p-4">
         <div class="container">
+            <div class="d-flex">
+                <p class="text-information">USER INFORMATION</p>
+                <hr class="pull-apart">
+            </div>
             <%= form({id:"new-user", action: receiveDataPath(), method: "POST"}) { %> 
-                <div class="d-flex">
-                    <p class="text-information">USER INFORMATION</p>
-                    <hr class="pull-apart">
-                </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-name">Name:<span class="requerid">*</span></p>
-                    <input class="inputs" type="text" name="name" autofocus>
+                    <%= f.InputTag({name:"name", value: employee.Name, class:"inputs" }) %>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill">Email:<span class="requerid">*</span></p>
-                    <input class="inputs" type="email" name="Email">
+                    <%= f.InputTag({name:"Email", value: employee.Email, class:"inputs", type:"Email" }) %>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-work-t">Work Telephone:<span class="requerid">*</span></p>
-                    <input class="inputs" type="number" name="work_telephone">
+                    <%= f.InputTag({name:"work_telephone", value: employee.WorkTelephone, class:"inputs", type:"number" }) %>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-m-t">Mobile Telephone:</p>
-                    <input class="inputs" type="number" name="mobile_telephone">
+                    <%= f.InputTag({name:"mobile_telephone", value: employee.MobileTelephone, class:"inputs", type:"number" }) %>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-fax">Fax Number:</p>
-                    <input class="inputs" type="text" name="fax_number">
+                    <%= f.InputTag({name:"fax_number", value: employee.Fax, class:"inputs", type:"text" }) %>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-contact">Contact Type:</p>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="contac_type" id="gridRadios1" value="Compensation">
+                        <%= f.InputTag({name:"contac_type", class:"form-check-input", type:"radio", id:"gridRadios1", value:"Compensation" }) %>
                         <label class="form-check-label" for="gridRadios1">
                           Compensation
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="contac_type" id="gridRadios2" value="Relocation">
+                        <%= f.InputTag({name:"contac_type", class:"form-check-input", type:"radio", id:"gridRadios2", value:"Relocation" }) %>
                         <label class="form-check-label" for="gridRadios2">
                           Relocation
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="contac_type" id="gridRadios3" value="Travel">
+                        <%= f.InputTag({name:"contac_type", class:"form-check-input", type:"radio", id:"gridRadios3", value:"Travel" }) %>
                         <label class="form-check-label" for="gridRadios3">
                           Travel
                         </label>
@@ -124,33 +124,23 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-admin">Is Internal Admin?</p>
                     <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" role="switch" id="admin" name="internal_admin" value="True">
-                        <input class="form-check-input" type="hidden" role="switch" id="admins" name="internal_admin" value="False">
+                        <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"checkbox", id:"admin", role:"switch", value:"true" }) %>
+                        <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"hidden", id:"admins", role:"switch", value:"false" })%>
                         <label class="form-check-label" for="admin"></label>
                     </div>
                 </div>
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-employer">Employer:</p>
-                    <select class="form-select" aria-label="Default select example" name="employer">
-                        <option selected>Select Employer</option>
-                        <option value="RMC 123">RMC 123</option>
-                        <option value="Acme LLC">Acme LLC</option>
-                        <option value="Magnus LLC">Magnus LLC</option>
-                    </select>
+                    <%= f.SelectTag({ options: { "RMC123" : "RMC123" , "Acme LLC" : "Acme LLC", "Magnus LLC" : "Magnus LLC" }, value:  3, name:"employer", class:"form-select"}) %>
                 </div>
                 <div class="d-flex pull-form mt-3">
                     <p class="data-to-fill-client">Access Client:</p>
-                    <select class="form-select" aria-label="Default select example" name="access_client">
-                        <option selected class="options-clients">Select Clients</option>
-                        <option value="one">One</option>
-                        <option value="Two">Two</option>
-                        <option value="Three">Three</option>
-                    </select>
-                </div>
-                <div class="information-message mt-5">
-                    <p><span class="requerid">*</span> Fields with this symbol are required.</p>
+                    <%= f.SelectTag({ options: {"Three" : "Three" , "Two" : "Two", "One" : "One"}, value:  3, name:"access_client", class:"form-select"}) %>
                 </div>
             <% } %>
+            <div class="information-message mt-5">
+                <p><span class="requerid">*</span> Fields with this symbol are required.</p>
+            </div>
         </div>
     </div>
 </section>
