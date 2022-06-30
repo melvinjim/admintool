@@ -1,0 +1,170 @@
+
+section.information-user-btn{
+    background-color: #fff;
+    padding: 13px 14px 13px 14px;
+    min-height: 5vh;
+
+    a{
+        text-decoration: none;
+    }
+
+    div.add-users{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .icon{
+        color: #80808075;
+    }
+
+    div.add-users .action{
+        display: flex;
+        align-items: center;
+        height: 35px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #48aeea;
+        border-color: #48aeea;
+    }
+
+    .action::before{
+        font: var(--fa-font-solid);
+        content: "\f013";
+        padding-right: 10px;
+    }
+
+    div.add-users .back{
+        display: flex;
+        align-items: center;
+        height: 35px;
+        margin-right: 10px;
+        color: #fff;
+        background-color: #aaacb1;
+        border-color: #aaacb1;
+    }
+
+    .back::before{
+        font: var(--fa-font-solid);
+        content: "\f177";
+        padding-right: 10px;
+    }
+
+    h4.title-new-user{
+        color: #48aeea;
+    }
+
+    div.add-users div .text-administration{
+        font-size: 13px;
+        color: #80808075;
+    }
+
+    div.add-users div .text-users{
+        font-size: 13px;
+        color: #80808075;
+    }
+
+    span.person-info{
+        font-size: 13px;
+        color: #262626;
+    }
+
+    .buttons-new-user{
+        display: flex;
+    }
+
+}
+
+
+section.user-information{
+    background-color: #fafafa;
+    min-height: 85vh;
+    padding: 40px 0 40px 0;
+
+    .form{
+        background-color: #fff;
+    }
+
+    div.container div p.text-information{
+        color: #4b4f58;
+        margin-right: 30px;
+    }
+
+    div.container div hr.pull-apart{
+        color: #80808096;
+        width: 85%;
+    }
+
+    span.requerid{
+        color: #b82020 !important;
+    }
+
+    div.pull-form{
+        align-items: center;
+    }
+
+    .text-email{
+        margin: 10px 153px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-telephone-w{
+        margin: 10px 74px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-telephone-m{
+        margin: 10px 64px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-fax{
+        margin: 10px 105px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-type{
+        margin: 10px 95px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-admin{
+        margin: 10px 68px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-employer{
+        margin: 10px 125px 12px 0px;
+        color: #4b4f58;
+    }
+
+    .text-client{
+        margin: 10px 94px 12px 0px;
+        color: #4b4f58;
+    }
+    .text-user-flags{
+        margin-top: 20px;
+    }
+}
+
+footer.info-person{
+    background-color: #383d43;
+    padding: 30px 0;
+    min-height: 5vh;
+
+    div.container{
+        justify-content: space-between;
+    }
+
+    div p.footer{
+        color: #fff;
+        margin: 0;
+    }
+
+    a{
+        color: #fff;
+    }
+
+    .contact{
+        color: #ffffff80;
+    }
+}

@@ -43,6 +43,12 @@ func CreateEmployees(c buffalo.Context) error {
 		return err
 	}
 
+	if employee.InternalAdmin == "true" {
+		employee.Admin = "Administrator"
+	} else {
+		employee.Admin = "User"
+	}
+
 	if verrs.HasAny() {
 		c.Set("employee", employee)
 		c.Set("errors", verrs)
@@ -55,4 +61,9 @@ func CreateEmployees(c buffalo.Context) error {
 	}
 
 	return c.Redirect(http.StatusSeeOther, "/")
+}
+
+func InfoUser(c buffalo.Context) error {
+
+	return c.Render(http.StatusOK, r.HTML("users/info_user.plush.html"))
 }

@@ -95,7 +95,7 @@
                 <tbody>
                     <%= for (Employee) in employees { %>
                         <tr>
-                            <td class="ps-4"><%= Employee.ID %></td>
+                            <td class="redirect-person-info ps-4"><a href="/info-user"><%= Employee.ID %></a></td>
                             <td><%= Employee.Name %></td>
                             <td><%= Employee.Email %></td>
                             <td><%= Employee.Admin %></td>
@@ -109,7 +109,7 @@
                                     ...
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">View</a></li>
+                                    <li><a class="dropdown-item" href="/info-user">View</a></li>
                                     <li><a class="dropdown-item" href="#">Edit</a></li>
                                     <li><a class="dropdown-item" href="#">Approve</a></li>
                                     <li><a class="dropdown-item" href="#">Deny</a></li>
