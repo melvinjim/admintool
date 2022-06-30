@@ -16,7 +16,7 @@ type Employee struct {
 	WorkTelephone   string    `form:"work_telephone" db:"work_telephone"`
 	MobileTelephone string    `form:"mobile_telephone" db:"mobile_telephone"`
 	Fax             string    `form:"fax_number" db:"fax"`
-	ContacType      string    `form:"contac_type" db:"contac_type"`
+	ContactType     string    `form:"contac_type" db:"contac_type"`
 	InternalAdmin   string    `form:"internal_admin" db:"internal_admin"`
 	Employer        string    `form:"employer" db:"employer"`
 	AccessClient    string    `form:"access_client" db:"access_client"`

@@ -45,6 +45,11 @@ section.management-user{
 section.employees-list{
     background-color: #fafafa;
     min-height: 85vh;
+
+    a{
+        color: #4a4f59;
+        text-decoration: none;
+    }
     
     .input-icons i {
         position: absolute;
