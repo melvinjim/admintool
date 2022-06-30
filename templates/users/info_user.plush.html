@@ -58,8 +58,8 @@
 <section class="information-user-btn">
     <div class="container d-flex info-users">
         <div>
-            <a href="/"><span class="icon"><i class="fa-solid fa-angle-left"></i></span> <span class="text-administration"> ADMINISTRATION /</span></a> <span class="text-users"> USERS </span> <span class="person-info">/ ESTELLE BENSON </span>
-            <h4 class="title-user">Estelle Benson</h4>
+            <a href="/"><span class="icon"><i class="fa-solid fa-angle-left"></i></span> <span class="text-administration"> ADMINISTRATION /</span></a> <span class="text-users"> USERS </span> <span class="person-info">/ ESTELLE BENSON</span>
+            <h4 class="title-user"><%= employee.Name %></h4>
         </div>
         <div class="d-flex">
             <a href="/" class="back btn">Back</a>
@@ -72,28 +72,28 @@
     <div class="container form p-4">
         <div class="container">
             <div class="d-flex">
-                <p class="text-information">Estelle Benson</p>
+                <p class="text-information"><%= employee.Name %></p>
                 <hr class="pull-apart">
             </div>
             <div class="d-flex pull-form">
                 <p class="text-email">Email:</p>
-                <p class="mb-0">ebenson@mail.com</p>
+                <p class="mb-0"><%= employee.Email %></p>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-telephone-w">Work Telephone:</p>
-                <p class="mb-0">(541) 754-3010</p>
+                <p class="mb-0"><%= employee.WorkTelephone%></p>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-telephone-m">Mobile Telephone:</p>
-                <p class="mb-0">+57 314 598 2659</p>
+                <p class="mb-0">+57 <%= employee.MobileTelephone%></p>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-fax">Fax Number:</p>
-                <p class="mb-0">3602557</p>
+                <p class="mb-0"><%= employee.Fax %></p>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-type">Contact Type:</p>
-                <p class="mb-0">Relocation</p>
+                <p class="mb-0"><%= employee.ContactType %></p>
             </div>
             <div class="d-flex text-user-flags">
                 <p class="text-flags">USER FLAGS</p>
@@ -101,15 +101,15 @@
             </div>
             <div class="d-flex pull-form">
                 <p class="text-admin">Is Internal Admin?</p>
-                <p class="mb-0">No</p>
+                <p class="mb-0"><%= employee.InternalAdmin %></p>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-employer">Employer:</p>
-                <p class="mb-0">Acme, LLC</p>
+                <p class="mb-0"><%= employee.Employer %></p>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-client">Access Client:</p>
-                <p class="mb-0">All Clients</p>
+                <p class="mb-0"><%= employee.AccessClient %></p>
             </div>
         </div>
     </div>

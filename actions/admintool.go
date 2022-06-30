@@ -64,6 +64,15 @@ func CreateEmployees(c buffalo.Context) error {
 }
 
 func InfoUser(c buffalo.Context) error {
+	employee := models.Employee{}
+	employeeID := c.Param("employee_id")
+	tx := c.Value("tx").(*pop.Connection)
+	err := tx.Find(&employee, employeeID)
+	if err != nil {
+		return err
+	}
+
+	c.Set("employee", employee)
 
 	return c.Render(http.StatusOK, r.HTML("users/info_user.plush.html"))
 }
