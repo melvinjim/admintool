@@ -140,9 +140,13 @@ section.fill-form{
         border-radius: 0;
     }
 
-    .form-check {
+    .radios-b {
         display: flex;
-        padding-right: 30px;
+        padding: 0;
+    }
+
+    .text-r{
+        padding-right: 20px;
     }
 
     .text-user-flags{
