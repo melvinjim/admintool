@@ -43,7 +43,7 @@ func CreateEmployees(c buffalo.Context) error {
 		return err
 	}
 
-	if employee.InternalAdmin == "true" {
+	if employee.InternalAdmin == "True" {
 		employee.Admin = "Administrator"
 	} else {
 		employee.Admin = "User"
@@ -66,7 +66,9 @@ func CreateEmployees(c buffalo.Context) error {
 func InfoUser(c buffalo.Context) error {
 	employee := models.Employee{}
 	employeeID := c.Param("employee_id")
+
 	tx := c.Value("tx").(*pop.Connection)
+
 	err := tx.Find(&employee, employeeID)
 	if err != nil {
 		return err
@@ -75,4 +77,43 @@ func InfoUser(c buffalo.Context) error {
 	c.Set("employee", employee)
 
 	return c.Render(http.StatusOK, r.HTML("users/info_user.plush.html"))
+}
+
+func Edit(c buffalo.Context) error {
+	employee := models.Employee{}
+	employeeID := c.Param("employee_id")
+
+	tx := c.Value("tx").(*pop.Connection)
+
+	err := tx.Find(&employee, employeeID)
+	if err != nil {
+		return err
+	}
+
+	c.Set("employee", employee)
+
+	return c.Render(http.StatusOK, r.HTML("users/edit.plush.html"))
+}
+
+func UserEdit(c buffalo.Context) error {
+	tx := c.Value("tx").(*pop.Connection)
+
+	employee := models.Employee{}
+	employeeID := c.Param("employee_id")
+
+	err := tx.Find(&employee, employeeID)
+	if err != nil {
+		return err
+	}
+
+	if err := c.Bind(&employee); err != nil {
+		return err
+	}
+
+	errCreate := tx.Update(&employee)
+	if errCreate != nil {
+		return errCreate
+	}
+
+	return c.Redirect(http.StatusSeeOther, "/")
 }
