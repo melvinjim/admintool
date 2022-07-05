@@ -113,6 +113,7 @@
                                     <li><a class="dropdown-item" href="/user/<%= Employee.ID %>">Edit</a></li>
                                     <li><a class="dropdown-item" href="#">Approve</a></li>
                                     <li><a class="dropdown-item" href="#">Deny</a></li>
+                                    <li><%= linkTo(	deleteUserEmployeeIDPath({employee_id: Employee.ID}), {class: "dropdown-item", data-method:"DELETE"}) { %> Remove <% } %></li>
                                 </ul>
                             </td>
                         </tr>
