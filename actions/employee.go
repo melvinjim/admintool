@@ -110,9 +110,28 @@ func UserEdit(c buffalo.Context) error {
 		return err
 	}
 
-	errCreate := tx.Update(&employee)
-	if errCreate != nil {
-		return errCreate
+	err = tx.Update(&employee)
+	if err != nil {
+		return err
+	}
+
+	return c.Redirect(http.StatusSeeOther, "/")
+}
+
+func DeleteUser(c buffalo.Context) error {
+	tx := c.Value("tx").(*pop.Connection)
+
+	employee := models.Employee{}
+	employeeID := c.Param("employee_id")
+
+	err := tx.Find(&employee, employeeID)
+	if err != nil {
+		return err
+	}
+
+	err = tx.Destroy(&employee)
+	if err != nil {
+		return err
 	}
 
 	return c.Redirect(http.StatusSeeOther, "/")
