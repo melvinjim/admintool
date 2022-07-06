@@ -1,7 +1,0 @@
-<%
-create_table("users") {
-  t.Column("id", "uuid", {primary: true})
-  t.Column("employer_id", "uuid", {})
-  t.ForeignKey("employer_id", {"employer": ["id"]}, {"on_delete": "cascade"})
-}
-%>

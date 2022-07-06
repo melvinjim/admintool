@@ -1,0 +1,5 @@
+<%
+add_foreign_key("employees", "employer_id", {"employer": ["id"]}, {
+    "on_delete": "cascade",
+})
+%>

@@ -18,7 +18,6 @@ type Employee struct {
 	Fax             string    `form:"fax_number" db:"fax"`
 	ContactType     string    `form:"contac_type" db:"contac_type"`
 	InternalAdmin   string    `form:"internal_admin" db:"internal_admin"`
-	Employer        string    `form:"employer" db:"employer"`
 	AccessClient    string    `form:"access_client" db:"access_client"`
 	Admin           string    `form:"admin" db:"admin"`
 	LastUpdated     string    `form:"last_updated" db:"last_updated"`
