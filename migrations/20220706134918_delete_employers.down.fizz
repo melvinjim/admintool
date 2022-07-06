@@ -1,0 +1,3 @@
+<%
+add_column("employees", "employer", "string", {})
+%>

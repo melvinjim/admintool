@@ -99,7 +99,7 @@
                             <td><%= Employee.Name %></td>
                             <td><%= Employee.Email %></td>
                             <td><%= Employee.Admin %></td>
-                            <td><%= Employee.Employer %></td>
+                            <td>#</td>
                             <td><%= Employee.LastUpdated %></td>
                             <td>
                                 <span class="label active">Active</span>
@@ -111,8 +111,6 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/info-user/<%= Employee.ID %>">View</a></li>
                                     <li><a class="dropdown-item" href="/user/<%= Employee.ID %>">Edit</a></li>
-                                    <li><a class="dropdown-item" href="#">Approve</a></li>
-                                    <li><a class="dropdown-item" href="#">Deny</a></li>
                                     <li><%= linkTo(	deleteUserEmployeeIDPath({employee_id: Employee.ID}), {class: "dropdown-item", data-method:"DELETE"}) { %> Remove <% } %></li>
                                 </ul>
                             </td>
