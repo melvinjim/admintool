@@ -2,6 +2,7 @@ package actions
 
 import (
 	"admintool/models"
+	"fmt"
 	"net/http"
 
 	"github.com/gobuffalo/buffalo"
@@ -23,20 +24,32 @@ func ListEmployees(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("users/index.plush.html"))
 }
 
-func AddUser(c buffalo.Context) error {
+func AddNewEmployees(c buffalo.Context) error {
+	tx := c.Value("tx").(*pop.Connection)
+
 	employee := models.Employee{}
 	c.Set("employee", employee)
+
+	employer := []models.Employer{}
+	if err := tx.All(&employer); err != nil {
+		return err
+	}
+
+	fmt.Println(employer)
+
+	c.Set("employer", employer)
 
 	return c.Render(http.StatusOK, r.HTML("users/new.plush.html"))
 }
 
 func CreateEmployees(c buffalo.Context) error {
+
+	tx := c.Value("tx").(*pop.Connection)
+
 	employee := models.Employee{}
 	if err := c.Bind(&employee); err != nil {
 		return err
 	}
-
-	tx := c.Value("tx").(*pop.Connection)
 
 	verrs, err := employee.Validate(tx)
 	if err != nil {
@@ -63,7 +76,7 @@ func CreateEmployees(c buffalo.Context) error {
 	return c.Redirect(http.StatusSeeOther, "/")
 }
 
-func InfoUser(c buffalo.Context) error {
+func InfoEmployer(c buffalo.Context) error {
 	employee := models.Employee{}
 	employeeID := c.Param("employee_id")
 
@@ -95,7 +108,7 @@ func Edit(c buffalo.Context) error {
 	return c.Render(http.StatusOK, r.HTML("users/edit.plush.html"))
 }
 
-func UserEdit(c buffalo.Context) error {
+func EmployerEdit(c buffalo.Context) error {
 	tx := c.Value("tx").(*pop.Connection)
 
 	employee := models.Employee{}
@@ -118,7 +131,7 @@ func UserEdit(c buffalo.Context) error {
 	return c.Redirect(http.StatusSeeOther, "/")
 }
 
-func DeleteUser(c buffalo.Context) error {
+func DeleteEmployees(c buffalo.Context) error {
 	tx := c.Value("tx").(*pop.Connection)
 
 	employee := models.Employee{}

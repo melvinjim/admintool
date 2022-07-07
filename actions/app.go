@@ -64,12 +64,12 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", ListEmployees)
-		app.GET("/users/new", AddUser)
+		app.GET("/users/new", AddNewEmployees)
 		app.POST("/create-employees", CreateEmployees)
-		app.GET("/info-user/{employee_id}", InfoUser)
+		app.GET("/info-user/{employee_id}", InfoEmployer)
 		app.GET("/user/{employee_id}", Edit)
-		app.PUT("/user-edit/{employee_id}", UserEdit)
-		app.DELETE("/delete-user/{employee_id}", DeleteUser)
+		app.PUT("/user-edit/{employee_id}", EmployerEdit)
+		app.DELETE("/delete-user/{employee_id}", DeleteEmployees)
 
 		app.ServeFiles("/", http.FS(public.FS())) // serve files from the public directory
 	}
