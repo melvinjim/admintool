@@ -7,6 +7,7 @@ import (
 
 	"github.com/gobuffalo/buffalo"
 	"github.com/gobuffalo/pop/v6"
+	"github.com/gofrs/uuid"
 )
 
 func ListEmployees(c buffalo.Context) error {
@@ -30,14 +31,19 @@ func AddNewEmployees(c buffalo.Context) error {
 	employee := models.Employee{}
 	c.Set("employee", employee)
 
-	employer := []models.Employer{}
-	if err := tx.All(&employer); err != nil {
+	employers := []models.Employer{}
+	if err := tx.All(&employers); err != nil {
 		return err
 	}
 
-	fmt.Println(employer)
+	fmt.Println(employers)
 
-	c.Set("employer", employer)
+	employersMap := map[string]uuid.UUID{}
+	for _, e := range employers {
+		employersMap[e.Name] = e.ID
+	}
+
+	c.Set("employersMap", employersMap)
 
 	return c.Render(http.StatusOK, r.HTML("users/new.plush.html"))
 }
