@@ -13,4 +13,5 @@ type Employer struct {
 	Phone     string    `form:"phone" db:"phone"`
 	CreateAt  time.Time `form:"created_at" db:"created_at"`
 	UpdatedAt time.Time `form:"updated_at" db:"updated_at"`
+	
 }

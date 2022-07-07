@@ -1,3 +1,0 @@
-<%
-add_column("employees", "employer_id")
-%>
