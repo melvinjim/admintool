@@ -157,6 +157,12 @@ func EmployerEdit(c buffalo.Context) error {
 		return err
 	}
 
+	if employee.InternalAdmin == "true" {
+		employee.Admin = "Administrator"
+	} else {
+		employee.Admin = "User"
+	}
+
 	err = tx.Update(&employee)
 	if err != nil {
 		return err

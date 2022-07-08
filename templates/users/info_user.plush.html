@@ -101,7 +101,11 @@
             </div>
             <div class="d-flex pull-form">
                 <p class="text-admin">Is Internal Admin?</p>
-                <p class="mb-0"><%= employee.InternalAdmin %></p>
+                <%= if (employee.InternalAdmin == "True") { %>
+                    <p class="mb-0">Yes</p>
+                <% } else { %>
+                    <p class="mb-0">No</p>
+                <% } %>
             </div>
             <div class="d-flex pull-form">
                 <p class="text-employer">Employer:</p>
