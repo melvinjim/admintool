@@ -99,7 +99,11 @@
                             <td><%= Employee.Name %></td>
                             <td><%= Employee.Email %></td>
                             <td><%= Employee.Admin %></td>
-                            <td>#</td>
+                            <td><%= for (Employers) in employers { %>
+                                <%= if (Employee.EmployerID.String() == Employers.ID.String()) { %>
+                                    <%= Employers.Name %>
+                                <% } %>
+                            <% } %></td>
                             <td><%= Employee.LastUpdated %></td>
                             <td>
                                 <span class="label active">Active</span>

@@ -20,6 +20,14 @@ func ListEmployees(c buffalo.Context) error {
 		return err
 	}
 
+	employers := []models.Employer{}
+	err = tx.All(&employers)
+	if err != nil {
+		return err
+	}
+
+	c.Set("employers", employers)
+
 	c.Set("employees", employees)
 
 	return c.Render(http.StatusOK, r.HTML("users/index.plush.html"))
@@ -93,6 +101,14 @@ func InfoEmployer(c buffalo.Context) error {
 		return err
 	}
 
+	employers := models.Employer{}
+	err = tx.Find(&employers, employee.EmployerID)
+	if err != nil {
+		return err
+	}
+
+	c.Set("employers", employers)
+
 	c.Set("employee", employee)
 
 	return c.Render(http.StatusOK, r.HTML("users/info_user.plush.html"))
@@ -108,6 +124,18 @@ func Edit(c buffalo.Context) error {
 	if err != nil {
 		return err
 	}
+
+	employersMaps := []models.Employer{}
+	if err := tx.All(&employersMaps); err != nil {
+		return err
+	}
+
+	employersMap := map[string]uuid.UUID{}
+	for _, e := range employersMaps {
+		employersMap[e.Name] = e.ID
+	}
+
+	c.Set("employersMap", employersMap)
 
 	c.Set("employee", employee)
 

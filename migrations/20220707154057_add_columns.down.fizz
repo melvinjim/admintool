@@ -1,3 +1,0 @@
-<%
-drop_column("employees", "employer_id", "uuid", {})
-%>
