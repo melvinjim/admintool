@@ -1,0 +1,3 @@
+<%
+exec "DROP EXTENSION uuid-ossp;"
+%>

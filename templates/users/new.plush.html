@@ -99,11 +99,7 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-contact">Contact Type:</p>
                     <div class="form-check">
-                        <%= if (employee.ContactType == "compensation") { %> 
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value: employee.ContactType, checked:"checked" }) %>
-                        <% } else { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value: employee.ContactType }) %>
-                        <% } %>
+                        <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value: "Compensation" }) %>
                         <label class="form-check-label text-r" for="gridRadios1">
                           Compensation
                         </label>
