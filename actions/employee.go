@@ -87,6 +87,13 @@ func CreateEmployees(c buffalo.Context) error {
 		return errCreate
 	}
 
+	fmt.Println(employee.Name)
+	fmt.Println(employee.Email)
+	fmt.Println(employee.WorkTelephone)
+	fmt.Println(employee.MobileTelephone)
+	fmt.Println(employee.Admin)
+	fmt.Println(employee.InternalAdmin)
+
 	return c.Redirect(http.StatusSeeOther, "/")
 }
 
@@ -155,6 +162,12 @@ func EmployerEdit(c buffalo.Context) error {
 
 	if err := c.Bind(&employee); err != nil {
 		return err
+	}
+
+	if employee.InternalAdmin == "true" {
+		employee.Admin = "Administrator"
+	} else {
+		employee.Admin = "User"
 	}
 
 	err = tx.Update(&employee)

@@ -99,19 +99,31 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-contact">Contact Type:</p>
                     <div class="form-check">
-                        <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value:employee.ContactType }) %>
+                        <%= if (employee.ContactType == "Compensation") { %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value:employee.ContactType, checked:"checked" }) %>
+                        <% } else { %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value:employee.ContactType }) %>
+                        <% } %>
                         <label class="form-check-label text-r" for="gridRadios1">
                           Compensation
                         </label>
                     </div>
                     <div class="form-check">
-                        <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value:employee.ContactType }) %>
+                        <%= if (employee.ContactType == "Relocation") { %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value:employee.ContactType, checked:"checked" }) %>
+                        <% } else { %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value:employee.ContactType }) %>
+                        <% } %>
                         <label class="form-check-label text-r" for="gridRadios2">
                           Relocation
                         </label>
                     </div>
                     <div class="form-check">
-                        <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: employee.ContactType }) %>
+                        <%= if (employee.ContactType == "Travel") { %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: employee.ContactType, checked:"checked"}) %>
+                        <% } else { %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: employee.ContactType }) %>
+                        <% } %>
                         <label class="form-check-label text-r" for="gridRadios3">
                           Travel
                         </label>
@@ -124,8 +136,13 @@
                 <div class="d-flex pull-form">
                     <p class="data-to-fill-admin">Is Internal Admin?</p>
                     <div class="form-check form-switch">
-                        <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"checkbox", id:"admin", role:"switch", value:"true" }) %>
-                        <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"hidden", id:"admins", role:"switch", value:"false" })%>
+                        <%= if (employee.InternalAdmin == "true") { %>
+                            <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"checkbox", id:"admin", role:"switch", value:"true", checked:"checked" }) %>
+                            <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"hidden", id:"admins", role:"switch", value:"false" })%>
+                        <% } else { %>
+                            <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"checkbox", id:"admin", role:"switch", value:"true", checked:"checked" }) %>
+                            <%= f.InputTag({name:"internal_admin", class:"form-check-input", type:"checkbox", id:"admins", role:"switch", value:"false" })%>
+                        <% } %>
                         <label class="form-check-label" for="admin"></label>
                     </div>
                 </div>
