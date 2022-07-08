@@ -87,13 +87,6 @@ func CreateEmployees(c buffalo.Context) error {
 		return errCreate
 	}
 
-	fmt.Println(employee.Name)
-	fmt.Println(employee.Email)
-	fmt.Println(employee.WorkTelephone)
-	fmt.Println(employee.MobileTelephone)
-	fmt.Println(employee.Admin)
-	fmt.Println(employee.InternalAdmin)
-
 	return c.Redirect(http.StatusSeeOther, "/")
 }
 

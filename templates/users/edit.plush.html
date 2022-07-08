@@ -100,9 +100,9 @@
                     <p class="data-to-fill-contact">Contact Type:</p>
                     <div class="form-check">
                         <%= if (employee.ContactType == "Compensation") { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value:employee.ContactType, checked:"checked" }) %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value: "Compensation" , checked:"checked" }) %>
                         <% } else { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value:employee.ContactType }) %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios1", value: "Compensation" }) %>
                         <% } %>
                         <label class="form-check-label text-r" for="gridRadios1">
                           Compensation
@@ -110,9 +110,9 @@
                     </div>
                     <div class="form-check">
                         <%= if (employee.ContactType == "Relocation") { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value:employee.ContactType, checked:"checked" }) %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value: "Relocation", checked:"checked" }) %>
                         <% } else { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value:employee.ContactType }) %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios2", value: "Relocation" }) %>
                         <% } %>
                         <label class="form-check-label text-r" for="gridRadios2">
                           Relocation
@@ -120,9 +120,9 @@
                     </div>
                     <div class="form-check">
                         <%= if (employee.ContactType == "Travel") { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: employee.ContactType, checked:"checked"}) %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: "Travel", checked:"checked"}) %>
                         <% } else { %>
-                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: employee.ContactType }) %>
+                            <%= f.InputTag({name:"contac_type", class:"form-check-input radios-b", type:"radio", id:"gridRadios3", value: "Travel" }) %>
                         <% } %>
                         <label class="form-check-label text-r" for="gridRadios3">
                           Travel
