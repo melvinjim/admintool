@@ -2,7 +2,6 @@ package actions
 
 import (
 	"admintool/models"
-	"fmt"
 	"net/http"
 
 	"github.com/gobuffalo/buffalo"
@@ -11,11 +10,16 @@ import (
 )
 
 func ListEmployees(c buffalo.Context) error {
+	tx := c.Value("tx").(*pop.Connection)
 	employees := []models.Employee{}
 
-	tx := c.Value("tx").(*pop.Connection)
+	filter := &models.Filter{}
+	if err := c.Bind(filter); err != nil {
+		return err
+	}
 
-	err := tx.All(&employees)
+	q := tx.Where(`employees.name like ?`, `%%`)
+	err := q.All(&employees)
 	if err != nil {
 		return err
 	}
@@ -43,8 +47,6 @@ func AddNewEmployees(c buffalo.Context) error {
 	if err := tx.All(&employers); err != nil {
 		return err
 	}
-
-	fmt.Println(employers)
 
 	employersMap := map[string]uuid.UUID{}
 	for _, e := range employers {
@@ -135,6 +137,14 @@ func Edit(c buffalo.Context) error {
 		employersMap[e.Name] = e.ID
 	}
 
+	employers := models.Employer{}
+	err = tx.Find(&employers, employee.EmployerID)
+	if err != nil {
+		return err
+	}
+
+	c.Set("employers", employers)
+
 	c.Set("employersMap", employersMap)
 
 	c.Set("employee", employee)
@@ -157,7 +167,7 @@ func EmployerEdit(c buffalo.Context) error {
 		return err
 	}
 
-	if employee.InternalAdmin == "true" {
+	if employee.InternalAdmin == "True" {
 		employee.Admin = "Administrator"
 	} else {
 		employee.Admin = "User"
@@ -184,6 +194,16 @@ func DeleteEmployees(c buffalo.Context) error {
 
 	err = tx.Destroy(&employee)
 	if err != nil {
+		return err
+	}
+
+	return c.Redirect(http.StatusSeeOther, "/")
+}
+
+func Filter(c buffalo.Context) error {
+
+	filter := &models.Filter{}
+	if err := c.Bind(filter); err != nil {
 		return err
 	}
 

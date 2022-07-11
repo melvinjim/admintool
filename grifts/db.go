@@ -30,6 +30,6 @@ var _ = grift.Add("db:seed", func(c *grift.Context) error {
 		{ID: uuid.UUID{}, Name: "Manuel", Address: "street 59", Phone: "3006547676"},
 		{ID: uuid.UUID{}, Name: "Esteban", Address: "street 87", Phone: "3004800947"},
 	}
-	err := models.DB.Create(e)
+	err := models.DB.Create(&e)
 	return err
 })

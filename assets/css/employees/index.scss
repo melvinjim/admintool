@@ -233,4 +233,9 @@ section.employees-list{
     table thead tr.column-table th{
         padding: 15px;
     }
+
+    .more.btn:focus {
+        box-shadow: none;
+    }
+
 }
