@@ -21,7 +21,7 @@ type Employee struct {
 	AccessClient    string    `form:"access_client" db:"access_client"`
 	Admin           string    `form:"admin" db:"admin"`
 	LastUpdated     string    `form:"last_updated" db:"last_updated"`
-	EmployerID      uuid.UUID `form:"employer_id" db:"employer_id"`
+	EmployerID      uuid.UUID `form:"employer" db:"employer_id"`
 	CreatedAt       time.Time `form:"created_at" db:"created_at"`
 	UpdatedAt       time.Time `form:"updated_at" db:"updated_at"`
 }

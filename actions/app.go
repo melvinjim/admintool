@@ -70,6 +70,7 @@ func App() *buffalo.App {
 		app.GET("/user/{employee_id}", Edit)
 		app.PUT("/user-edit/{employee_id}", EmployerEdit)
 		app.DELETE("/delete-user/{employee_id}", DeleteEmployees)
+		app.POST("/filter", Filter)
 
 		app.ServeFiles("/", http.FS(public.FS())) // serve files from the public directory
 	}
